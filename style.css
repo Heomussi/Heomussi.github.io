@@ -78,3 +78,19 @@ body {
     line-height: 1.8;
     max-width: 700px;
 }
+.contact {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px 120px;
+    border-top: 1px solid #ddd;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    line-height: 1.8;
+    max-width: 700px;
+}

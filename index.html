@@ -1,107 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SungSoo In | AI Governance Architect</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SungSoo In | Athena</title>
 
-    <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #171a23;
+      --text: #e8e8e8;
+      --muted: #a9afbd;
+      --line: #2a2f3a;
+      --accent: #d6b36a;
+      --accent-soft: rgba(214, 179, 106, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    main {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 72px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height: 1;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 22px;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .description {
+      max-width: 760px;
+      margin: 34px auto 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .button-row {
+      margin-top: 42px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    a.button:hover {
+      background: var(--accent);
+      color: #111;
+    }
+
+    a.button.secondary {
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    a.button.secondary:hover {
+      background: var(--text);
+      color: #111;
+    }
+
+    section {
+      margin-top: 82px;
+      padding: 44px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      text-align: left;
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.7rem;
+      color: var(--text);
+    }
+
+    section p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .concept {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .concept h3 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .concept p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .documents {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .document-card {
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+    }
+
+    .document-card h3 {
+      margin-top: 0;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    .document-card p {
+      font-size: 0.95rem;
+    }
+
+    .document-card a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      main {
+        padding: 48px 16px;
+      }
+
+      section {
+        padding: 28px;
+      }
+
+      .concept-grid,
+      .documents {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      a.button {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <main>
+    <div class="container">
+      <div class="eyebrow">Independent AI Governance Architecture Project</div>
 
-    <section class="hero">
+      <h1>Athena</h1>
 
-        <h1>SungSoo In (Heomu)</h1>
+      <div class="subtitle">
+        Governance Layer Architecture for Autonomous AI Systems
+      </div>
 
-        <h2>AI Governance Architect</h2>
+      <p class="description">
+        Athena is an independent AI governance architecture project addressing
+        Authority Drift in autonomous AI systems. It focuses on runtime authority
+        boundaries, governance triggers, Structured Human Deliberation, and
+        accountable governance records.
+      </p>
+
+      <div class="button-row">
+        <a class="button" href="https://github.com/Heomussi/Athena-Governance-Architecture" target="_blank">
+          View GitHub Repository
+        </a>
+
+        <a class="button secondary" href="./assets/docs/Athena_Position_Paper_Draft_v0.1.pdf" target="_blank">
+          Read Position Paper
+        </a>
+
+        <a class="button secondary" href="./assets/docs/Athena_Core_Philosophy_Draft_v0.1.pdf" target="_blank">
+          Read Core Philosophy
+        </a>
+      </div>
+
+      <section>
+        <h2>About Athena</h2>
 
         <p>
-            Focused on authority boundary control,
-            non-decision escalation design,
-            and governance-layer architecture
-            for high-risk AI systems.
+          As AI systems evolve from decision-support tools into increasingly
+          autonomous operational systems, the distinction between assisting human
+          decisions and exercising decision authority becomes progressively less
+          apparent.
         </p>
 
-        <div class="buttons">
+        <p>
+          Athena identifies this gradual transition as Authority Drift.
+          Rather than replacing existing AI governance frameworks, Athena explores
+          how governance can remain active when autonomous decision authority
+          becomes operationally uncertain.
+        </p>
 
-            <a href="https://github.com/Heomussi">
-                GitHub
-            </a>
+        <p>
+          Athena proposes a runtime governance layer that helps recognize authority
+          boundaries, initiate governance triggers, structure accountable human
+          deliberation, and preserve governance records for review and future
+          improvement.
+        </p>
+      </section>
 
-            <a href="https://www.linkedin.com/in/heoradish/">
-                LinkedIn
-            </a>
+      <section>
+        <h2>Core Concepts</h2>
 
+        <div class="concept-grid">
+          <div class="concept">
+            <h3>Authority Drift</h3>
+            <p>
+              The progressive expansion of autonomous operational authority beyond
+              the point where continued autonomous execution can remain legitimate
+              without accountable human deliberation.
+            </p>
+          </div>
+
+          <div class="concept">
+            <h3>Governance Trigger</h3>
+            <p>
+              A runtime mechanism that transitions the system from autonomous
+              execution to accountable human governance when legitimate autonomous
+              authority becomes uncertain.
+            </p>
+          </div>
+
+          <div class="concept">
+            <h3>Structured Human Deliberation</h3>
+            <p>
+              A mechanism for guiding, preserving, and recording accountable human
+              reasoning after decision authority has returned to human governance.
+            </p>
+          </div>
         </div>
-<section class="about">
+      </section>
 
-    <h2>About</h2>
+      <section>
+        <h2>Documents</h2>
 
-    <p>
-        I explore governance architectures for high-risk AI systems.
-    </p>
+        <div class="documents">
+          <div class="document-card">
+            <h3>Athena Position Paper Draft v0.1</h3>
+            <p>
+              Introduces Athena as a governance layer architecture for autonomous
+              AI systems and explains the emerging governance gap created by
+              Authority Drift.
+            </p>
+            <a href="./assets/docs/Athena_Position_Paper_Draft_v0.1.pdf" target="_blank">
+              Open Position Paper
+            </a>
+          </div>
 
-    <p>
-        My work focuses on authority boundaries,
-        non-decision escalation mechanisms,
-        and accountability pathways when AI outputs
-        begin to influence human decision-making
-        beyond their intended scope.
-    </p>
+          <div class="document-card">
+            <h3>Athena Core Philosophy Draft v0.1</h3>
+            <p>
+              Explains the foundational reasoning behind Athena, including the
+              limits of autonomous authority, the nature of human judgment, and
+              Structured Human Deliberation.
+            </p>
+            <a href="./assets/docs/Athena_Core_Philosophy_Draft_v0.1.pdf" target="_blank">
+              Open Core Philosophy
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <p>
-        Current project:
-        Athena Governance Architecture.
-    </p>
-
-</section>
-    </section>
-
-    <section class="project">
-
-        <h2>Featured Project</h2>
-
-        <h3>Athena Governance Architecture</h3>
+      <section>
+        <h2>Current Status</h2>
 
         <p>
-            A governance-layer framework designed to detect
-            authority boundary overreach in AI-assisted
-            decision systems.
+          Athena is currently an early-stage governance architecture project.
+          Its current focus is on defining Authority Drift as a runtime governance
+          challenge, developing governance-layer documentation, and exploring how
+          Athena may complement responsible AI, AI governance, and execution
+          governance initiatives.
         </p>
-        
-<div class="buttons">
-    <a href="https://github.com/Heomussi/Athena-Governance-Architecture">
-        View Repository
-    </a>
+      </section>
 
-    <a href="https://github.com/Heomussi/Athena-Governance-Architecture/blob/main/Athena_Public_Overview_v1.pdf">
-        Read Overview PDF
-    </a>
-</div>
-    </section>
-<section class="contact">
-
-    <h2>Contact</h2>
-
-    <p>
-        Open to conversations around AI governance,
-        authority boundary design, and responsible AI deployment.
-    </p>
-
-    <div class="buttons">
-        <a href="mailto:kidssuin@gmail.com">
-            Email
-        </a>
-
-        <a href="https://www.linkedin.com/in/heoradish/">
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/Heomussi">
-            GitHub
-        </a>
+      <footer>
+        <p>
+          Prepared by <strong>SungSoo In</strong>
+        </p>
+        <p>
+          <a href="https://github.com/Heomussi/Athena-Governance-Architecture" target="_blank">
+            GitHub Repository
+          </a>
+        </p>
+      </footer>
     </div>
-
-</section>
+  </main>
 </body>
 </html>
